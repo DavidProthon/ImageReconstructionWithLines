@@ -45,7 +45,7 @@ V tabulce níže je postupné formování obrázku s tím, jak narůstá počet 
   <tr>
     <td align="center">LSE-0.086_LN-28000</td>
     <td align="center">LSE-0.042_LN-38000</td>
-    <td align="center">LSE-0.023_TH-0_LN-44730</td>
+    <td align="center">LSE-0.023_TH-0_LN-44730_ET-19819</td>
   </tr>
 </table>
 
@@ -64,8 +64,8 @@ V tabulce níže je ukázka vlivu PBP na velikost chyby. Obrázky níže mají k
   </tr>
     <tr>
     <td align="center">originální obrázek</td>
-    <td align="center">LSE-0.037_LN-5987</td>
-    <td align="center">LSE-0.031_LN-6342</td>
+    <td align="center">PBP-16_LSE-0.037_LN-5987</td>
+    <td align="center">PBP-12_LSE-0.031_LN-6342</td>
   </tr>
   <tr>
     <td><img src="./images/pixels_between_pegs/Brno-Cathedral-of-St-Peter.jpg_PBP-8_GS-16_LSE-0.030_TH-0_LN-6518_ET-291.png" width="250"></td>
@@ -73,9 +73,9 @@ V tabulce níže je ukázka vlivu PBP na velikost chyby. Obrázky níže mají k
     <td><img src="./images/pixels_between_pegs/Brno-Cathedral-of-St-Peter.jpg_PBP-2_GS-16_LSE-0.030_TH-0_LN-6112_ET-1002.png" width="250"></td>
   </tr>
   <tr>
-    <td align="center">LSE-0.030_LN-6518</td>
-    <td align="center">LSE-0.027_LN-6829</td>
-    <td align="center">LSE-0.030_LN-6112</td>
+    <td align="center">PBP-8_LSE-0.030_LN-6518</td>
+    <td align="center">PBP-4_LSE-0.027_LN-6829</td>
+    <td align="center">PBP-2_LSE-0.030_LN-6112</td>
   </tr>
 </table>
 
@@ -94,8 +94,8 @@ V tabulce níže je ukázka vlivu GS na velikost chyby. Obrázky níže mají ko
   </tr>
     <tr>
     <td align="center">originální obrázek</td>
-    <td align="center">LSE-0.037_LN-5987</td>
-    <td align="center">LSE-0.031_LN-6342</td>
+    <td align="center">GS-16_LSE-0.037_LN-5987</td>
+    <td align="center">GS-12_LSE-0.031_LN-6342</td>
   </tr>
   <tr>
     <td><img src="./images/gray_shade/Brno-Cathedral-of-St-Peter.jpg_PBP-16_GS-8_LSE-0.034_TH-0_LN-11897_ET-578.png" width="250"></td>
@@ -103,8 +103,8 @@ V tabulce níže je ukázka vlivu GS na velikost chyby. Obrázky níže mají ko
     <td><img src="./images/gray_shade/Brno-Cathedral-of-St-Peter.jpg_PBP-16_GS-2_LSE-0.034_TH-0_LN-46812_ET-1069.png" width="250"></td>
   </tr>
   <tr>
-    <td align="center">LSE-0.030_LN-6518</td>
-    <td align="center">LSE-0.027_LN-6829</td>
-    <td align="center">LSE-0.030_LN-6112</td>
+    <td align="center">GS-8_LSE-0.030_LN-6518</td>
+    <td align="center">GS-4_LSE-0.027_LN-6829</td>
+    <td align="center">GS-2_LSE-0.030_LN-6112</td>
   </tr>
 </table>
