@@ -11,13 +11,13 @@ nastavení tloušťky kreslených přímek.
 Výsledky skriptu potvrzují Reifovu analýzu. Nejnižší chyby dosahujeme snížením vzdálenosti mezi kolíky a zmenšením světlosti 
 kreslené přímky. Na druhou stranu to však vede k výraznému nárůstu výpočetního času.
 
-Přehled zkratek:
-PBP = pixelů mezi kolíky
-GS = světlost kreslené přímky
-LSE = velikost chyby
-LN = počet přímek
-TH = tloušťka přímky
-ET = doba výpočtu [s]
+**Přehled zkratek**:
+*PBP* = pixelů mezi kolíky
+**GS** = světlost kreslené přímky
+**LSE** = velikost chyby
+**LN** = počet přímek
+**TH** = tloušťka přímky
+**ET** = doba výpočtu [s]
 
 V tabulce níže je postupné formování obrázku s tím, jak narůstá počet přímek. 
 Počáteční podmínky: 
@@ -48,7 +48,7 @@ TH = 0 (tloušťka přímky 1px)
   </tr>
 </table>
 
-V tabulce níže je ukázka vlivu PBP na velikost erroru. Obrázky níže mají konstantní GS, ale proměnou PBP.
+V tabulce níže je ukázka vlivu PBP na velikost chyby. Obrázky níže mají konstantní GS, ale proměnou PBP.
 Počáteční podmínky: 
 PBP = 16,12,8,4,2
 GS = 16
@@ -77,7 +77,7 @@ TH = 0 (tloušťka přímky 1px)
   </tr>
 </table>
 
-V tabulce níže je ukázka vlivu GS na velikost erroru. Obrázky níže mají konstantní PBP, ale proměnou GS.
+V tabulce níže je ukázka vlivu GS na velikost chyby. Obrázky níže mají konstantní PBP, ale proměnou GS.
 Počáteční podmínky: 
 PBP = 16
 GS = 16,12,8,4,2
