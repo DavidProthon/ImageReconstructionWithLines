@@ -2,10 +2,10 @@
 
  ## O aplikaci
 
-Skript slouží k vytváření obrazů pouze přímkami. Jedná se o rekonstrukci dle článku Roberta Reifa:
+Aplikace slouží k vytváření obrazů pouze přímkami. Jedná se o rekonstrukci dle článku Roberta Reifa:
 https://www.robertoreif.com/blog/2018/1/7/drawing-with-straight-lines
 
-Skript obsahuje automatickou kontrolu hodnoty LSE, která ukončí běh programu při nalezení nejnižší chyby + je přidána možnost 
+Aplikace obsahuje automatickou kontrolu hodnoty LSE, která ukončí běh programu při nalezení nejnižší chyby + je přidána možnost 
 nastavení tloušťky kreslených přímek.
 
 Výsledky skriptu potvrzují Reifovu analýzu. Nejnižší chyby dosahujeme snížením vzdálenosti mezi kolíky a zmenšením světlosti 
@@ -64,8 +64,8 @@ V tabulce níže je ukázka vlivu PBP na velikost chyby. Obrázky níže mají k
   </tr>
     <tr>
     <td align="center">originální obrázek</td>
-    <td align="center">PBP-16_LSE-0.037_LN-5987</td>
-    <td align="center">PBP-12_LSE-0.031_LN-6342</td>
+    <td align="center">PBP-16_LSE-0.037_LN-5987_ET-146</td>
+    <td align="center">PBP-12_LSE-0.031_LN-6342_ET-210</td>
   </tr>
   <tr>
     <td><img src="./images/pixels_between_pegs/Brno-Cathedral-of-St-Peter.jpg_PBP-8_GS-16_LSE-0.030_TH-0_LN-6518_ET-291.png" width="250"></td>
@@ -73,9 +73,9 @@ V tabulce níže je ukázka vlivu PBP na velikost chyby. Obrázky níže mají k
     <td><img src="./images/pixels_between_pegs/Brno-Cathedral-of-St-Peter.jpg_PBP-2_GS-16_LSE-0.030_TH-0_LN-6112_ET-1002.png" width="250"></td>
   </tr>
   <tr>
-    <td align="center">PBP-8_LSE-0.030_LN-6518</td>
-    <td align="center">PBP-4_LSE-0.027_LN-6829</td>
-    <td align="center">PBP-2_LSE-0.030_LN-6112</td>
+    <td align="center">PBP-8_LSE-0.030_LN-6518_ET-291</td>
+    <td align="center">PBP-4_LSE-0.027_LN-6829_ET-569</td>
+    <td align="center">PBP-2_LSE-0.030_LN-6112_ET-1002</td>
   </tr>
 </table>
 
@@ -94,8 +94,8 @@ V tabulce níže je ukázka vlivu GS na velikost chyby. Obrázky níže mají ko
   </tr>
     <tr>
     <td align="center">originální obrázek</td>
-    <td align="center">GS-16_LSE-0.037_LN-5987</td>
-    <td align="center">GS-12_LSE-0.031_LN-6342</td>
+    <td align="center">GS-16_LSE-0.037_LN-5987_ET-287</td>
+    <td align="center">GS-12_LSE-0.031_LN-6342_ET-187</td>
   </tr>
   <tr>
     <td><img src="./images/gray_shade/Brno-Cathedral-of-St-Peter.jpg_PBP-16_GS-8_LSE-0.034_TH-0_LN-11897_ET-578.png" width="250"></td>
@@ -103,8 +103,8 @@ V tabulce níže je ukázka vlivu GS na velikost chyby. Obrázky níže mají ko
     <td><img src="./images/gray_shade/Brno-Cathedral-of-St-Peter.jpg_PBP-16_GS-2_LSE-0.034_TH-0_LN-46812_ET-1069.png" width="250"></td>
   </tr>
   <tr>
-    <td align="center">GS-8_LSE-0.030_LN-6518</td>
-    <td align="center">GS-4_LSE-0.027_LN-6829</td>
-    <td align="center">GS-2_LSE-0.030_LN-6112</td>
+    <td align="center">GS-8_LSE-0.030_LN-6518_ET-578</td>
+    <td align="center">GS-4_LSE-0.027_LN-6829_ET-582</td>
+    <td align="center">GS-2_LSE-0.030_LN-6112_ET-1069</td>
   </tr>
 </table>
