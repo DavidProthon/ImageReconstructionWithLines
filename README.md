@@ -5,30 +5,31 @@
 Skript slouží k vytváření obrazů pouze přímkami. Jedná se o rekonstrukci dle článku Roberta Reifa:
 https://www.robertoreif.com/blog/2018/1/7/drawing-with-straight-lines
 
-Skript obsahuje automatickou kontrolu hodnoty LSE, která ukončí běh při nalezení nejnižší chyby + je přidána možnost 
+Skript obsahuje automatickou kontrolu hodnoty LSE, která ukončí běh programu při nalezení nejnižší chyby + je přidána možnost 
 nastavení tloušťky kreslených přímek.
 
 Výsledky skriptu potvrzují Reifovu analýzu. Nejnižší chyby dosahujeme snížením vzdálenosti mezi kolíky a zmenšením světlosti 
 kreslené přímky. Na druhou stranu to však vede k výraznému nárůstu výpočetního času.
 
 Přehled zkratek:
-PBP = 
-GS = 
-LSE =
-LN = 
-TH =
-ET =
+PBP = pixelů mezi kolíky
+GS = světlost kreslené přímky
+LSE = velikost chyby
+LN = počet přímek
+TH = tloušťka přímky
+ET = doba výpočtu [s]
 
 V tabulce níže je postupné formování obrázku s tím, jak narůstá počet přímek. 
 Počáteční podmínky: 
 PBP = 2
 GS = 2
+TH = 0 (tloušťka přímky 1px)
 
 <table>
   <tr>
-    <td><img src="./images/gradual_formation/Brno-Cathedral-of-St-Peter.jpg" width="270"></td>
-    <td><img src="./images/gradual_formation/Brno-Cathedral-of-St-Peter.jpg_PBP-2_GS-2_LSE-0.230_LN-8000_TH-0.png" width="270"></td>
-    <td><img src="./images/gradual_formation/Brno-Cathedral-of-St-Peter.jpg_PBP-2_GS-2_LSE-0.149_LN-18000_TH-0.png" width="270"></td>
+    <td><img src="./images/gradual_formation/Brno-Cathedral-of-St-Peter.jpg" width="250"></td>
+    <td><img src="./images/gradual_formation/Brno-Cathedral-of-St-Peter.jpg_PBP-2_GS-2_LSE-0.230_LN-8000_TH-0.png" width="250"></td>
+    <td><img src="./images/gradual_formation/Brno-Cathedral-of-St-Peter.jpg_PBP-2_GS-2_LSE-0.149_LN-18000_TH-0.png" width="250"></td>
   </tr>
     <tr>
     <td align="center">originální obrázek</td>
@@ -36,9 +37,9 @@ GS = 2
     <td align="center">LSE-0.149_LN-18000</td>
   </tr>
   <tr>
-    <td><img src="./images/gradual_formation/Brno-Cathedral-of-St-Peter.jpg_PBP-2_GS-2_LSE-0.086_LN-28000_TH-0.png" width="270"></td>
-    <td><img src="./images/gradual_formation/Brno-Cathedral-of-St-Peter.jpg_PBP-2_GS-2_LSE-0.042_LN-38000_TH-0.png" width="270"></td>
-    <td><img src="./images/gradual_formation/Brno-Cathedral-of-St-Peter.jpg_PBP-2_GS-2_LSE-0.023_TH-0_LN-44730_ET-19819.png" width="270"></td>
+    <td><img src="./images/gradual_formation/Brno-Cathedral-of-St-Peter.jpg_PBP-2_GS-2_LSE-0.086_LN-28000_TH-0.png" width="250"></td>
+    <td><img src="./images/gradual_formation/Brno-Cathedral-of-St-Peter.jpg_PBP-2_GS-2_LSE-0.042_LN-38000_TH-0.png" width="250"></td>
+    <td><img src="./images/gradual_formation/Brno-Cathedral-of-St-Peter.jpg_PBP-2_GS-2_LSE-0.023_TH-0_LN-44730_ET-19819.png" width="250"></td>
   </tr>
   <tr>
     <td align="center">LSE-0.086_LN-28000</td>
@@ -47,11 +48,17 @@ GS = 2
   </tr>
 </table>
 
+V tabulce níže je ukázka vlivu PBP na velikost erroru. Obrázky níže mají konstantní GS, ale proměnou PBP.
+Počáteční podmínky: 
+PBP = 16,12,8,4,2
+GS = 16
+TH = 0 (tloušťka přímky 1px)
+
 <table>
   <tr>
-    <td><img src="./images/gradual_formation/Brno-Cathedral-of-St-Peter.jpg" width="270"></td>
-    <td><img src="./images/pixels_between_pegs/Brno-Cathedral-of-St-Peter.jpg_PBP-16_GS-16_LSE-0.037_TH-0_LN-5987_ET-146.png" width="270"></td>
-    <td><img src="./images/pixels_between_pegs/Brno-Cathedral-of-St-Peter.jpg_PBP-12_GS-16_LSE-0.031_TH-0_LN-6342_ET-210.png" width="270"></td>
+    <td><img src="./images/gradual_formation/Brno-Cathedral-of-St-Peter.jpg" width="250"></td>
+    <td><img src="./images/pixels_between_pegs/Brno-Cathedral-of-St-Peter.jpg_PBP-16_GS-16_LSE-0.037_TH-0_LN-5987_ET-146.png" width="250"></td>
+    <td><img src="./images/pixels_between_pegs/Brno-Cathedral-of-St-Peter.jpg_PBP-12_GS-16_LSE-0.031_TH-0_LN-6342_ET-210.png" width="250"></td>
   </tr>
     <tr>
     <td align="center">originální obrázek</td>
@@ -70,11 +77,17 @@ GS = 2
   </tr>
 </table>
 
+V tabulce níže je ukázka vlivu GS na velikost erroru. Obrázky níže mají konstantní PBP, ale proměnou GS.
+Počáteční podmínky: 
+PBP = 16
+GS = 16,12,8,4,2
+TH = 0 (tloušťka přímky 1px)
+
 <table>
   <tr>
-    <td><img src="./images/gradual_formation/Brno-Cathedral-of-St-Peter.jpg" width="270"></td>
-    <td><img src="./images/gray_shade/Brno-Cathedral-of-St-Peter.jpg_PBP-16_GS-16_LSE-0.037_TH-0_LN-5987_ET-287.png" width="270"></td>
-    <td><img src="./images/gray_shade/Brno-Cathedral-of-St-Peter.jpg_PBP-16_GS-12_LSE-0.035_TH-0_LN-8048_ET-187.png" width="270"></td>
+    <td><img src="./images/gradual_formation/Brno-Cathedral-of-St-Peter.jpg" width="250"></td>
+    <td><img src="./images/gray_shade/Brno-Cathedral-of-St-Peter.jpg_PBP-16_GS-16_LSE-0.037_TH-0_LN-5987_ET-287.png" width="250"></td>
+    <td><img src="./images/gray_shade/Brno-Cathedral-of-St-Peter.jpg_PBP-16_GS-12_LSE-0.035_TH-0_LN-8048_ET-187.png" width="250"></td>
   </tr>
     <tr>
     <td align="center">originální obrázek</td>
