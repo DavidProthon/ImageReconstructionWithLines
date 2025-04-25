@@ -11,6 +11,19 @@ nastavení tloušťky kreslených přímek.
 Výsledky skriptu potvrzují Reifovu analýzu. Nejnižší chyby dosahujeme snížením vzdálenosti mezi kolíky a zmenšením světlosti 
 kreslené přímky. Na druhou stranu to však vede k výraznému nárůstu výpočetního času.
 
+Přehled zkratek:
+PBP = 
+GS = 
+LSE =
+LN = 
+TH =
+ET =
+
+V tabulce níže je postupné formování obrázku s tím, jak narůstá počet přímek. 
+Počáteční podmínky: 
+PBP = 2
+GS = 2
+
 <table>
   <tr>
     <td><img src="./images/gradual_formation/Brno-Cathedral-of-St-Peter.jpg" width="270"></td>
@@ -23,9 +36,9 @@ kreslené přímky. Na druhou stranu to však vede k výraznému nárůstu výpo
     <td align="center">LSE-0.149_LN-18000</td>
   </tr>
   <tr>
-    <td><img src="./images/gradual_formation/Brno-Cathedral-of-St-Peter.jpg_PBP-2_GS-2_LSE-0.086_LN-28000_TH-0.png" width="250"></td>
-    <td><img src="./images/gradual_formation/Brno-Cathedral-of-St-Peter.jpg_PBP-2_GS-2_LSE-0.042_LN-38000_TH-0.png" width="250"></td>
-    <td><img src="./images/gradual_formation/Brno-Cathedral-of-St-Peter.jpg_PBP-2_GS-2_LSE-0.023_TH-0_LN-44730_ET-19819.png" width="250"></td>
+    <td><img src="./images/gradual_formation/Brno-Cathedral-of-St-Peter.jpg_PBP-2_GS-2_LSE-0.086_LN-28000_TH-0.png" width="270"></td>
+    <td><img src="./images/gradual_formation/Brno-Cathedral-of-St-Peter.jpg_PBP-2_GS-2_LSE-0.042_LN-38000_TH-0.png" width="270"></td>
+    <td><img src="./images/gradual_formation/Brno-Cathedral-of-St-Peter.jpg_PBP-2_GS-2_LSE-0.023_TH-0_LN-44730_ET-19819.png" width="270"></td>
   </tr>
   <tr>
     <td align="center">LSE-0.086_LN-28000</td>
@@ -57,4 +70,25 @@ kreslené přímky. Na druhou stranu to však vede k výraznému nárůstu výpo
   </tr>
 </table>
 
-
+<table>
+  <tr>
+    <td><img src="./images/gradual_formation/Brno-Cathedral-of-St-Peter.jpg" width="270"></td>
+    <td><img src="./images/gray_shade/Brno-Cathedral-of-St-Peter.jpg_PBP-16_GS-16_LSE-0.037_TH-0_LN-5987_ET-287.png" width="270"></td>
+    <td><img src="./images/gray_shade/Brno-Cathedral-of-St-Peter.jpg_PBP-16_GS-12_LSE-0.035_TH-0_LN-8048_ET-187.png" width="270"></td>
+  </tr>
+    <tr>
+    <td align="center">originální obrázek</td>
+    <td align="center">LSE-0.037_LN-5987</td>
+    <td align="center">LSE-0.031_LN-6342</td>
+  </tr>
+  <tr>
+    <td><img src="./images/gray_shade/Brno-Cathedral-of-St-Peter.jpg_PBP-16_GS-8_LSE-0.034_TH-0_LN-11897_ET-578.png" width="250"></td>
+    <td><img src="./images/gray_shade/Brno-Cathedral-of-St-Peter.jpg_PBP-16_GS-4_LSE-0.034_TH-0_LN-23733_ET-582.png" width="250"></td>
+    <td><img src="./images/gray_shade/Brno-Cathedral-of-St-Peter.jpg_PBP-16_GS-2_LSE-0.034_TH-0_LN-46812_ET-1069.png" width="250"></td>
+  </tr>
+  <tr>
+    <td align="center">LSE-0.030_LN-6518</td>
+    <td align="center">LSE-0.027_LN-6829</td>
+    <td align="center">LSE-0.030_LN-6112</td>
+  </tr>
+</table>
