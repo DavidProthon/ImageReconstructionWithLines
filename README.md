@@ -11,5 +11,6 @@ nastavení tloušťky kreslených přímek.
 Výsledky skriptu potvrzují Reifovu analýzu. Nejnižší chyby dosahujeme snížením vzdálenosti mezi kolíky a zmenšením světlosti 
 kreslené přímky. Na druhou stranu to však vede k výraznému nárůstu výpočetního času.
 
-![](./images/gradual_formation/Brno-Cathedral-of-St-Peter.jpg) 
+<img src="./images/gradual_formation/Brno-Cathedral-of-St-Peter.jpg" width="300">
+
 
