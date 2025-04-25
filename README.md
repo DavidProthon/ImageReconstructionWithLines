@@ -11,13 +11,13 @@ nastavení tloušťky kreslených přímek.
 Výsledky skriptu potvrzují Reifovu analýzu. Nejnižší chyby dosahujeme snížením vzdálenosti mezi kolíky a zmenšením světlosti 
 kreslené přímky. Na druhou stranu to však vede k výraznému nárůstu výpočetního času.
 
-**Přehled zkratek**:
-*PBP* = pixelů mezi kolíky
-**GS** = světlost kreslené přímky
-**LSE** = velikost chyby
-**LN** = počet přímek
-**TH** = tloušťka přímky
-**ET** = doba výpočtu [s]
+- **Přehled zkratek**:
+- *PBP* = pixelů mezi kolíky
+- **GS** = světlost kreslené přímky
+- **LSE** = velikost chyby
+- **LN** = počet přímek
+- **TH** = tloušťka přímky
+- **ET** = doba výpočtu [s]
 
 V tabulce níže je postupné formování obrázku s tím, jak narůstá počet přímek. 
 Počáteční podmínky: 
