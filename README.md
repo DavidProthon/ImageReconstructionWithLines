@@ -108,3 +108,33 @@ V tabulce níže je ukázka vlivu GS na velikost chyby. Obrázky níže mají ko
     <td align="center">GS-2_LSE-0.030_LN-6112_ET-1069</td>
   </tr>
 </table>
+
+V tabulce níže je ukázka vlivu TH na velikost chyby. Obrázky níže mají konstantní PBP a GS, ale proměnou TH.
+
+**Počáteční podmínky:** 
+- **PBP** = 4
+- **GS** = 4
+- **TH** = 0 (tloušťka přímky 1px), 1 (tloušťka přímky 3px), 2 (tloušťka přímky 5px), 3 (tloušťka přímky 7px), 4 (tloušťka přímky 9px)
+
+<table>
+  <tr>
+    <td><img src="./images/gradual_formation/Brno-Cathedral-of-St-Peter.jpg" width="250"></td>
+    <td><img src="./images/thickness/Brno-Cathedral-of-St-Peter.jpg_PBP-4_GS-4_LSE-0.023_TH-0_LN-23130_ET-3710.png" width="250"></td>
+    <td><img src="./images/thickness/Brno-Cathedral-of-St-Peter.jpg_PBP-4_GS-4_LSE-0.015_TH-1_LN-5192_ET-3499.png" width="250"></td>
+  </tr>
+    <tr>
+    <td align="center">originální obrázek</td>
+    <td align="center">TH-0_LSE-0.023_LN-23130_ET-3710</td>
+    <td align="center">TH-1_LSE-0.015_LN-5192_ET-3499</td>
+  </tr>
+  <tr>
+    <td><img src="./images/thickness/Brno-Cathedral-of-St-Peter.jpg_PBP-4_GS-4_LSE-0.015_TH-2_LN-2053_ET-4109.png" width="250"></td>
+    <td><img src="./images/thickness/Brno-Cathedral-of-St-Peter.jpg_PBP-4_GS-4_LSE-0.019_TH-3_LN-966_ET-4225.png" width="250"></td>
+    <td><img src="./images/thickness/Brno-Cathedral-of-St-Peter.jpg_PBP-4_GS-4_LSE-0.024_TH-4_LN-566_ET-3135.png" width="250"></td>
+  </tr>
+  <tr>
+    <td align="center">TH-2_LSE-0.015_LN-2053_ET-4109</td>
+    <td align="center">TH-3_LSE-0.019_LN-966_ET-4225</td>
+    <td align="center">TH-4_LSE-0.024_LN-566_ET-3135</td>
+  </tr>
+</table>

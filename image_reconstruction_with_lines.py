@@ -4,15 +4,15 @@ import time
 
 start_time = time.time()
 
-PIXELS_BETWEEN_PEGS = 2
+PIXELS_BETWEEN_PEGS = 4
 FIRST_PEG_POSITION = (0, 0) # Top left
-GRAY_SHADE = 2
-THICKNESS = 1
+GRAY_SHADE = 4
+THICKNESS = 0
 picture_name = "Brno-Cathedral-of-St-Peter.jpg"
 
 def open_picture(filepath):
     """
-    Load picture and return returning its dimensions.
+    Load picture and returning its dimensions.
     """
 
     image = cv2.imread(filepath)
@@ -259,8 +259,8 @@ def main():
             number_of_lines += 1
             print(f"number_of_lines: {number_of_lines}")
             print(error)
-            if number_of_lines % 2000 == 0:
-                cv2.imwrite(f"{picture_name}_PBP-{PIXELS_BETWEEN_PEGS}_GS-{GRAY_SHADE}_LSE-{least_square_error:.3f}_LN-{number_of_lines}_TH-{THICKNESS}.png", line_image)
+            #if number_of_lines % 100 == 0:
+                #cv2.imwrite(f"{picture_name}_PBP-{PIXELS_BETWEEN_PEGS}_GS-{GRAY_SHADE}_LSE-{least_square_error:.3f}_LN-{number_of_lines}_TH-{THICKNESS}.png", line_image)
         else:
             break  
 
