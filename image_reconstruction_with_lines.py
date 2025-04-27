@@ -2,6 +2,17 @@ import cv2
 import numpy as np
 import time
 
+"""
+The application is used for creating images using only straight lines. It is a reconstruction based on an article by Robert Reif:
+https://www.robertoreif.com/blog/2018/1/7/drawing-with-straight-lines
+
+The application includes automatic control of the LSE value, which stops the program when the lowest error is found. 
+It also adds the possibility to set the thickness of the drawn lines.
+
+The script's results confirm Reif's analysis. The lowest error is achieved by decreasing the distance between the pegs and 
+lowering the brightness of the drawn line. On the other hand, this leads to a significant increase in computing time.
+"""
+
 start_time = time.time()
 
 PIXELS_BETWEEN_PEGS = 4
@@ -111,7 +122,7 @@ def get_pegs_positions(PIXELS_BETWEEN_PEGS,image_height, image_width):
         "right_edge_pegs": right_edge_pegs,
     }
 
-def bresenham_line_new(start, end, thickness, canvas_size=None):
+def bresenham_line_modified(start, end, thickness, canvas_size=None):
     """
     Modified Bresenham line algorithm that also accounts for line thickness.
     """
@@ -242,7 +253,7 @@ def main():
         pixels_to_change = tuple()
 
         for peg in all_pegs:
-            pixel_in_bresenham_line = bresenham_line_new(start_peg_position, peg, THICKNESS, canvas_size=(height, width))
+            pixel_in_bresenham_line = bresenham_line_modified(start_peg_position, peg, THICKNESS, canvas_size=(height, width))
             mean_gray = get_mean_gray(gray_image,pixel_in_bresenham_line)
 
             if mean_gray < max_gray:
@@ -258,7 +269,7 @@ def main():
             error = least_square_error
             number_of_lines += 1
             print(f"number_of_lines: {number_of_lines}")
-            print(error)
+            #ťprint(error)
             #if number_of_lines % 100 == 0:
                 #cv2.imwrite(f"{picture_name}_PBP-{PIXELS_BETWEEN_PEGS}_GS-{GRAY_SHADE}_LSE-{least_square_error:.3f}_LN-{number_of_lines}_TH-{THICKNESS}.png", line_image)
         else:
