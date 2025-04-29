@@ -15,10 +15,10 @@ lowering the brightness of the drawn line. On the other hand, this leads to a si
 
 start_time = time.time()
 
-PIXELS_BETWEEN_PEGS = 4
-FIRST_PEG_POSITION = (0, 0) # Top left
-GRAY_SHADE = 4
-THICKNESS = 0
+pixels_between_pegs = 4
+first_peg_position = (0, 0) # Top left
+gray_shade = 16
+thickness = 0
 picture_name = "Brno-Cathedral-of-St-Peter.jpg"
 
 def open_picture(filepath):
@@ -234,26 +234,24 @@ def compute_LSE(original_image, line_image):
 
     return LSE
     
-def main():
+def main(first_peg_position):
     gray_image, height, width = open_picture(picture_name)  
     copied_gray_image = gray_image.copy()
     line_image = create_line_image(height, width)
-    start_peg_position = FIRST_PEG_POSITION
+    pegs_coordinates = get_pegs_positions(pixels_between_pegs,height, width)
     error = 1
     number_of_lines = 0 
 
     while True:
-        positon_of_peg = check_position_of_actual_peg(start_peg_position,height, width)
+        positon_of_peg = check_position_of_actual_peg(first_peg_position,height, width)
         end_peg_positions = get_end_peg_positions(positon_of_peg)
-        pegs_coordinates = get_pegs_positions(PIXELS_BETWEEN_PEGS,height, width)
         all_pegs = select_necessary_pegs(end_peg_positions, pegs_coordinates)
 
         max_gray = 255  
-        end_point = (0,0)
         pixels_to_change = tuple()
 
         for peg in all_pegs:
-            pixel_in_bresenham_line = bresenham_line_modified(start_peg_position, peg, THICKNESS, canvas_size=(height, width))
+            pixel_in_bresenham_line = bresenham_line_modified(first_peg_position, peg, thickness, canvas_size=(height, width))
             mean_gray = get_mean_gray(gray_image,pixel_in_bresenham_line)
 
             if mean_gray < max_gray:
@@ -261,21 +259,21 @@ def main():
                 end_point = peg
                 pixels_to_change = pixel_in_bresenham_line 
 
-        add_gray_to_line_image(line_image,pixels_to_change,GRAY_SHADE)
-        subtract_gray_from_gray_image(gray_image,pixels_to_change,GRAY_SHADE)
+        add_gray_to_line_image(line_image,pixels_to_change,gray_shade)
+        subtract_gray_from_gray_image(gray_image,pixels_to_change,gray_shade)
         least_square_error = compute_LSE(copied_gray_image, line_image)
 
         if least_square_error < error:
             error = least_square_error
             number_of_lines += 1
             print(f"number_of_lines: {number_of_lines}")
-            #ťprint(error)
+            #print(error)
             #if number_of_lines % 100 == 0:
-                #cv2.imwrite(f"{picture_name}_PBP-{PIXELS_BETWEEN_PEGS}_GS-{GRAY_SHADE}_LSE-{least_square_error:.3f}_LN-{number_of_lines}_TH-{THICKNESS}.png", line_image)
+                #cv2.imwrite(f"{picture_name}_PBP-{pixels_between_pegs}_GS-{gray_shade}_LSE-{least_square_error:.3f}_LN-{number_of_lines}_TH-{THICKNESS}.png", line_image)
         else:
             break  
 
-        start_peg_position = end_point
+        first_peg_position = end_point
 
     end_time = time.time()
     elapsed_time = end_time - start_time
@@ -284,8 +282,8 @@ def main():
     cv2.waitKey(0)
     cv2.destroyAllWindows()
                 
-    cv2.imwrite(f"{picture_name}_PBP-{PIXELS_BETWEEN_PEGS}_GS-{GRAY_SHADE}_LSE-{least_square_error:.3f}_TH-{THICKNESS}_LN-{number_of_lines}_ET-{elapsed_time:.0f}.png", line_image)
+    cv2.imwrite(f"{picture_name}_PBP-{pixels_between_pegs}_GS-{gray_shade}_LSE-{least_square_error:.3f}_TH-{thickness}_LN-{number_of_lines}_ET-{elapsed_time:.0f}.png", line_image)
 
 if __name__ == "__main__":
-    main()
+    main(first_peg_position)
 
